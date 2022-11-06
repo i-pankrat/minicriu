@@ -100,6 +100,52 @@ static int writefile(const char *file, const char *buf, size_t len) {
 	return bytes;
 }
 
+static void mc_sighnd(int sig) {
+
+	__atomic_fetch_add(&mc_futex_checkpoint, 1, __ATOMIC_SEQ_CST);
+	syscall(SYS_futex, &mc_futex_checkpoint, FUTEX_WAKE, 1);
+
+	struct savedctx ctx;
+	SAVE_CTX(ctx);
+
+	int tid = syscall(SYS_gettid);
+
+	pthread_t self = pthread_self();
+	pid_t *tidptr = gettid_ptr(self);
+	pthread_kill(self, 0);
+
+	char buf[256];
+	int len = snprintf(buf, sizeof(buf), "%s: self %p tidptr %p *tidptr %d\n",
+			__func__, self, tidptr, *tidptr);
+	write(2, buf, len);
+
+	assert(*gettid_ptr(pthread_self()) == tid);
+
+	while (!mc_futex_restore) {
+		// syscall sets thread-local errno while thread-local
+		// storage is not yet initialized.
+		// syscall(SYS_futex, &mc_futex_restore, FUTEX_WAIT, 0);
+		unsigned long ret;
+		asm volatile (
+			"syscall\n\t"
+			: "=a"(ret)
+			: "a"(SYS_futex),
+			  "D"(&mc_futex_restore),
+			  "S"(FUTEX_WAIT),
+			  "d"(0),
+			  "b"(tid)
+			: "memory");
+	}
+
+	RESTORE_CTX(ctx);
+
+	int newtid = syscall(SYS_gettid);
+	*gettid_ptr(pthread_self()) = newtid;
+
+	volatile int thread_loop = 0;
+	while (thread_loop);
+}
+
 int minicriu_dump(void) {
 
 	pid_t mytid = syscall(SYS_gettid);
@@ -121,6 +167,13 @@ int minicriu_dump(void) {
 
 	struct savedctx ctx;
 	SAVE_CTX(ctx);
+
+	struct sigaction new;
+	new.sa_handler = mc_sighnd;
+	if (sigaction(MC_THREAD_SIG, &new, NULL)) {
+		perror("sigaction");
+		return 1;
+	}
 
 	DIR* tasksdir = opendir("/proc/self/task/");
 	struct dirent *taskdent;
@@ -148,7 +201,7 @@ int minicriu_dump(void) {
 	}
 
 	struct sigaction acts[SIGRTMAX];
-	struct sigaction new = { .sa_handler = SIG_DFL };
+	new.sa_handler = SIG_DFL;
 	for (int i = 1; i < SIGRTMAX; ++i) {
 		if (sigaction(i, &new, &acts[i])) {
 			char msg[256];
@@ -235,61 +288,7 @@ int minicriu_dump(void) {
 	return 0;
 }
 
-
-static void mc_sighnd(int sig) {
-
-	__atomic_fetch_add(&mc_futex_checkpoint, 1, __ATOMIC_SEQ_CST);
-	syscall(SYS_futex, &mc_futex_checkpoint, FUTEX_WAKE, 1);
-
-	struct savedctx ctx;
-	SAVE_CTX(ctx);
-
-	int tid = syscall(SYS_gettid);
-
-	pthread_t self = pthread_self();
-	pid_t *tidptr = gettid_ptr(self);
-	pthread_kill(self, 0);
-
-	char buf[256];
-	int len = snprintf(buf, sizeof(buf), "%s: self %p tidptr %p *tidptr %d\n",
-			__func__, self, tidptr, *tidptr);
-	write(2, buf, len);
-
-	assert(*gettid_ptr(pthread_self()) == tid);
-
-	while (!mc_futex_restore) {
-		// syscall sets thread-local errno while thread-local
-		// storage is not yet initialized.
-		// syscall(SYS_futex, &mc_futex_restore, FUTEX_WAIT, 0);
-		unsigned long ret;
-		asm volatile (
-			"syscall\n\t"
-			: "=a"(ret)
-			: "a"(SYS_futex),
-			  "D"(&mc_futex_restore),
-			  "S"(FUTEX_WAIT),
-			  "d"(0),
-			  "b"(tid)
-			: "memory");
-	}
-
-	RESTORE_CTX(ctx);
-
-	int newtid = syscall(SYS_gettid);
-	*gettid_ptr(pthread_self()) = newtid;
-
-	volatile int thread_loop = 0;
-	while (thread_loop);
-}
-
 int minicriu_register_new_thread(void) {
-
-	struct sigaction new;
-	new.sa_handler = mc_sighnd;
-	if (sigaction(MC_THREAD_SIG, &new, NULL)) {
-		perror("sigaction");
-		return 1;
-	}
 
 	sigset_t set;
 	sigemptyset(&set);
