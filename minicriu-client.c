@@ -147,14 +147,17 @@ static void mc_sighnd(int sig) {
 
 	if (mc_futex_thread_restored == 0)
 	{
+		printf("mc_sighnd: send FUTEX_WAKE to maintheard\n");
 		syscall(SYS_futex, &mc_futex_thread_restored, FUTEX_WAKE, INT_MAX);
 	}
 
+	printf("therad newtid %d oldtid %d waits to siagction restoration\n", newtid, tid);
 	while (!mc_futex_sigaction_restore)
 	{
 		syscall(SYS_futex, &mc_futex_sigaction_restore, FUTEX_WAIT, 0);
 	}
 
+	printf("therad newtid %d oldtid %d mc_sighnd has been successfully completed\n", newtid, tid);
 	volatile int thread_loop = 0;
 	while (thread_loop);
 }
@@ -232,6 +235,7 @@ int minicriu_dump(void) {
 
 	int newtid = syscall(SYS_gettid);
 	*gettid_ptr(pthread_self()) = newtid;
+	printf("mainthread has restored, newtid %d\n", newtid);
 
 	if ((0 < auxvlen) && (prctl(PR_SET_MM, PR_SET_MM_AUXV, auxv, auxvlen, 0) < 0)) {
 		perror("prctl auxv");
@@ -289,6 +293,7 @@ int minicriu_dump(void) {
 	mc_futex_restore = 1;
 	syscall(SYS_futex, &mc_futex_restore, FUTEX_WAKE, INT_MAX);
 
+	printf("mainthread %d wait when all othread threads will recover\n", newtid);
 	while ((current_count = mc_futex_thread_restored) != 0) {
 		syscall(SYS_futex, &mc_futex_thread_restored, FUTEX_WAIT, current_count);
 	}
@@ -301,6 +306,7 @@ int minicriu_dump(void) {
 		}
 	}
 
+	printf("mainthread %d send FUTEX_WAKE other therad to complete their restoration\n", newtid);
 	mc_futex_sigaction_restore = 1;
 	syscall(SYS_futex, &mc_futex_sigaction_restore, FUTEX_WAKE, INT_MAX);
 

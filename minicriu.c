@@ -72,6 +72,7 @@ static void restore(int sig, siginfo_t *info, void *ctx) {
 	greg_t *gregs = uc->uc_mcontext.gregs;
 	int thread_id = gregs[REG_RDX];
 	struct user_regs_struct *uregs = (void*)prstatus[thread_id]->pr_reg;
+	printf("restore: thread_id %d\n", thread_id);
 
 	/*printf("restore %d fsbase %llx\n", thread_id, uregs->fs_base);*/
 
@@ -252,6 +253,7 @@ int main(int argc, char *argv[]) {
 						fd, fm->file_ofs * fh->page_size);
 				if (addr != (void*)fm->start) {
 					if (addr == MAP_FAILED) {
+						// EBADF  fd is not a valid file descriptor (and MAP_ANONYMOUS was not set).
 						perror("mmap file");
 					} else {
 						fprintf(stderr, "mmap mismatch 2\n");
