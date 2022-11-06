@@ -49,6 +49,8 @@
 
 static volatile uint32_t mc_futex_checkpoint;
 static volatile uint32_t mc_futex_restore;
+static volatile uint32_t mc_futex_sigaction_restore;
+static volatile uint32_t mc_futex_thread_restored;
 
 struct savedctx {
 	unsigned long fsbase, gsbase;
@@ -102,9 +104,6 @@ static int writefile(const char *file, const char *buf, size_t len) {
 
 static void mc_sighnd(int sig) {
 
-	__atomic_fetch_add(&mc_futex_checkpoint, 1, __ATOMIC_SEQ_CST);
-	syscall(SYS_futex, &mc_futex_checkpoint, FUTEX_WAKE, 1);
-
 	struct savedctx ctx;
 	SAVE_CTX(ctx);
 
@@ -120,6 +119,9 @@ static void mc_sighnd(int sig) {
 	write(2, buf, len);
 
 	assert(*gettid_ptr(pthread_self()) == tid);
+
+	__atomic_fetch_add(&mc_futex_checkpoint, 1, __ATOMIC_SEQ_CST);
+	syscall(SYS_futex, &mc_futex_checkpoint, FUTEX_WAKE, 1);
 
 	while (!mc_futex_restore) {
 		// syscall sets thread-local errno while thread-local
@@ -137,10 +139,21 @@ static void mc_sighnd(int sig) {
 			: "memory");
 	}
 
+	__atomic_fetch_sub(&mc_futex_thread_restored, 1, __ATOMIC_SEQ_CST);
 	RESTORE_CTX(ctx);
 
 	int newtid = syscall(SYS_gettid);
 	*gettid_ptr(pthread_self()) = newtid;
+
+	if (mc_futex_thread_restored == 0)
+	{
+		syscall(SYS_futex, &mc_futex_thread_restored, FUTEX_WAKE, INT_MAX);
+	}
+
+	while (!mc_futex_sigaction_restore)
+	{
+		syscall(SYS_futex, &mc_futex_sigaction_restore, FUTEX_WAIT, 0);
+	}
 
 	volatile int thread_loop = 0;
 	while (thread_loop);
@@ -190,6 +203,8 @@ int minicriu_dump(void) {
 			/* don't touch premodorial thread */
 			continue;
 		}
+
+		mc_futex_thread_restored++;
 		int r = syscall(SYS_tkill, tid, MC_THREAD_SIG);
 		__atomic_fetch_sub(&mc_futex_checkpoint, 1, __ATOMIC_SEQ_CST);
 	}
@@ -217,14 +232,6 @@ int minicriu_dump(void) {
 
 	int newtid = syscall(SYS_gettid);
 	*gettid_ptr(pthread_self()) = newtid;
-
-	for (int i = 1; i < SIGRTMAX; ++i) {
-		if (sigaction(i, &acts[i], NULL)) {
-			char msg[256];
-			snprintf(msg, sizeof(msg), "sigaction restore %d: %m", i);
-			fprintf(stderr, "%s\n", msg);
-		}
-	}
 
 	if ((0 < auxvlen) && (prctl(PR_SET_MM, PR_SET_MM_AUXV, auxv, auxvlen, 0) < 0)) {
 		perror("prctl auxv");
@@ -281,6 +288,21 @@ int minicriu_dump(void) {
 
 	mc_futex_restore = 1;
 	syscall(SYS_futex, &mc_futex_restore, FUTEX_WAKE, INT_MAX);
+
+	while ((current_count = mc_futex_thread_restored) != 0) {
+		syscall(SYS_futex, &mc_futex_thread_restored, FUTEX_WAIT, current_count);
+	}
+
+	for (int i = 1; i < SIGRTMAX; ++i) {
+		if (sigaction(i, &acts[i], NULL)) {
+			char msg[256];
+			snprintf(msg, sizeof(msg), "sigaction restore %d: %m", i);
+			fprintf(stderr, "%s\n", msg);
+		}
+	}
+
+	mc_futex_sigaction_restore = 1;
+	syscall(SYS_futex, &mc_futex_sigaction_restore, FUTEX_WAKE, INT_MAX);
 
 	volatile int thread_loop = 0;
 	while (thread_loop);
