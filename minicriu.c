@@ -34,6 +34,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
+#include <pthread.h>
 #include <sched.h>
 #include <sys/mman.h>
 #include <sys/fcntl.h>
@@ -45,6 +46,7 @@
 #include <sys/syscall.h>      /* Definition of SYS_* constants */
 #include <linux/sched.h>
 #include <linux/elf.h>
+#include <linux/futex.h>
 
 
 static struct elf_prpsinfo *prpsinfo;
@@ -52,6 +54,7 @@ static struct elf_prpsinfo *prpsinfo;
 #define MAX_THREADS 128
 
 static int thread_n;
+static volatile uint32_t thread_restore;
 static struct elf_prstatus *prstatus[MAX_THREADS];
 static struct user_fpregs_struct *prfpreg[MAX_THREADS];
 static char stack[MAX_THREADS][4 * 4096];
@@ -67,6 +70,9 @@ static void arch_prctl(int code, unsigned long addr) {
 }
 
 static void restore(int sig, siginfo_t *info, void *ctx) {
+	__atomic_fetch_add(&thread_restore, 1, __ATOMIC_SEQ_CST);
+	syscall(SYS_futex, &thread_restore, FUTEX_WAKE, 1);
+
 	ucontext_t *uc = (ucontext_t *) ctx;
 
 	greg_t *gregs = uc->uc_mcontext.gregs;
@@ -308,8 +314,21 @@ int main(int argc, char *argv[]) {
 		if (-1 == clone(clonefn, stack[i] + sizeof(stack[i]), flags, (void*)(uintptr_t)i)) {
 			perror("clone");
 		}
+		__atomic_fetch_sub(&thread_restore, 1, __ATOMIC_SEQ_CST);
 #endif
 	}
+
+	/*
+	* 	Here we synchronize the restoration of threads so their
+	*	SIGSIS signal handler was not replaced by mc_sighnd
+	*	after the current thread recovery.
+	*/
+
+	uint32_t current_count;
+	while ((current_count = thread_restore) != 0) {
+		syscall(SYS_futex, &thread_restore, FUTEX_WAIT, current_count);
+	}
+
 	clonefn((void*)(uintptr_t)0);
 	fprintf(stderr, "should not reach here\n");
 	return 0;
