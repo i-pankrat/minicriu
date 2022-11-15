@@ -60,7 +60,6 @@ static char stack[MAX_THREADS][4 * 4096];
 static pthread_mutex_t thread_lock = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t thread_cond = PTHREAD_COND_INITIALIZER;
 static uint32_t thread_restore;
-static uint32_t all_thread_restore;
 
 static size_t elfsz;
 static void *rawelf;
@@ -74,15 +73,12 @@ static void arch_prctl(int code, unsigned long addr) {
 
 static void restore(int sig, siginfo_t *info, void *ctx) {
 
-	if (!all_thread_restore) {
-		pthread_mutex_lock(&thread_lock);
+	pthread_mutex_lock(&thread_lock);
+	if (!thread_restore) {
 		thread_restore--;
-
-		if (thread_restore == 0) {
-			pthread_cond_signal(&thread_cond);
-		}
-		pthread_mutex_unlock(&thread_lock);
+		pthread_cond_signal(&thread_cond);
 	}
+	pthread_mutex_unlock(&thread_lock);
 
 	ucontext_t *uc = (ucontext_t *) ctx;
 
@@ -325,10 +321,12 @@ int main(int argc, char *argv[]) {
 		if (-1 == clone(clonefn, stack[i] + sizeof(stack[i]), flags, (void*)(uintptr_t)i)) {
 			perror("clone");
 		}
+		else {
+			pthread_mutex_lock(&thread_lock);
+			thread_restore++;
+			pthread_mutex_unlock(&thread_lock);
+		}
 
-		pthread_mutex_lock(&thread_lock);
-		thread_restore++;
-		pthread_mutex_unlock(&thread_lock);
 #endif
 	}
 
@@ -344,7 +342,6 @@ int main(int argc, char *argv[]) {
 	}
 	pthread_mutex_unlock(&thread_lock);
 
-	all_thread_restore = 1;
 	pthread_mutex_destroy(&thread_lock);
 	pthread_cond_destroy(&thread_cond);
 
