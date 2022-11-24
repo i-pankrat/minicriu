@@ -183,12 +183,12 @@ int main(int argc, char *argv[]) {
 		if (ph->p_type != PT_LOAD) {
 			continue;
 		}
-		if (munmap((void*)ph->p_vaddr, ph->p_filesz)) {
+		if (munmap((void*)ph->p_vaddr, ph->p_memsz)) {
 			/*perror("munmap");*/
 		}
 		void *addr = mmap((void*)ph->p_vaddr,
-				ph->p_filesz,
-				PROT_READ | PROT_WRITE | PROT_EXEC,
+				ph->p_memsz,
+				PROT_WRITE,
 				MAP_PRIVATE | MAP_FIXED | MAP_ANONYMOUS,
 				-1, 0);
 		if (addr != (void*)ph->p_vaddr) {
@@ -272,6 +272,12 @@ int main(int argc, char *argv[]) {
 			continue;
 		}
 		pread(fd, (void*)ph->p_vaddr, ph->p_filesz, ph->p_offset);
+
+		int mprot = 0;
+		mprot |= ph->p_flags & PF_R ? PROT_READ : 0;
+		mprot |= ph->p_flags & PF_W ? PROT_WRITE : 0;
+		mprot |= ph->p_flags & PF_X ? PROT_EXEC : 0;
+		mprotect((void*)ph->p_vaddr, ph->p_memsz, mprot);
 	}
 
 	struct sigaction sa = {
