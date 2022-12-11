@@ -46,25 +46,25 @@
 #include "minicriu-client.h"
 
 #define MC_THREAD_SIG SIGSYS
-#define MAX_MAPS 512
+#define MC_MAX_MAPS 512
 
 static volatile uint32_t mc_futex_checkpoint;
 static volatile uint32_t mc_futex_restore;
-static volatile uint32_t restored_threads;
+static volatile uint32_t mc_restored_threads;
 int mapscnt;
 
 static void mc_sighnd(int sig);
-static int getmap();
-static int cleanup();
+static int mc_getmap();
+static int mc_cleanup();
 
 struct savedctx {
 	unsigned long fsbase, gsbase;
 };
 
-struct map {
+struct mc_map {
     void *start;
     void *end;
-} maps[MAX_MAPS];
+} maps[MC_MAX_MAPS];
 
 #define SAVE_CTX(ctx) do { \
 	asm volatile("rdfsbase %0" : "=r" (ctx.fsbase) : : "memory"); \
@@ -260,8 +260,8 @@ int minicriu_dump(void) {
 	*	munmap segments before the threads are restored
 	*/
 
-	while ((current_count = restored_threads) != thread_n) {
-		syscall(SYS_futex, &restored_threads, FUTEX_WAIT, current_count);
+	while ((current_count = mc_restored_threads) != thread_n) {
+		syscall(SYS_futex, &mc_restored_threads, FUTEX_WAIT, current_count);
 	}
 
 	if (cleanup())
@@ -311,8 +311,8 @@ static void mc_sighnd(int sig) {
 			: "memory");
 	}
 
-	__atomic_fetch_add(&restored_threads, 1, __ATOMIC_SEQ_CST);
-	syscall(SYS_futex, &restored_threads, FUTEX_WAKE, 1);
+	__atomic_fetch_add(&mc_restored_threads, 1, __ATOMIC_SEQ_CST);
+	syscall(SYS_futex, &mc_restored_threads, FUTEX_WAKE, 1);
 
 	RESTORE_CTX(ctx);
 
@@ -336,7 +336,7 @@ int minicriu_register_new_thread(void) {
 	return 0;
 }
 
-static int getmap() {
+static int mc_getmap() {
 	char line[512];
 	mapscnt = 0;
 	FILE *proc_maps;
@@ -360,7 +360,7 @@ static int getmap() {
 	return 0;
 }
 
-static int cleanup() {
+static int mc_cleanup() {
 	char line[512];
 	FILE *proc_maps;
 	proc_maps = fopen("/proc/self/maps", "r");
