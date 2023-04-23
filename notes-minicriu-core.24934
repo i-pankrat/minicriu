@@ -1,0 +1,474 @@
+
+Note segment of 17368 bytes at offset 0x3290:
+  Owner          Data size  Type
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24936, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265887168  r14:                       1
+    r13:             -4294967297  r12:                      10
+    rbp:      0x0000000000006168  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065957471424  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24936
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a5a3e620
+    fs.base:   0x00007f63a5a3f700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24944, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265581792  r14:                       2
+    r13:             -4294967297  r12:                      10
+    rbp:      0x0000000000006170  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065689358848  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24944
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f6395a8d360
+    fs.base:   0x00007f6395a8e700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24938, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265951776  r14:                       1
+    r13:             -4294967297  r12:                      10
+    rbp:      0x000000000000616a  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065955357888  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24938
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a583a620
+    fs.base:   0x00007f63a583b700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24943, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066266985084  r14:         140065931179536
+    r13:         140066266985000  r12:                      10
+    rbp:      0x000000000000616f  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065931177280  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24943
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a412aea0
+    fs.base:   0x00007f63a412c700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24935, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:                       7  r14:         140065527303476
+    r13:         140066374954881  r12:                      10
+    rbp:      0x0000000000006167  rbx:                       7
+    r11:                     642  r10:         140066374979496
+    r9:          140066355965568  r8:                        0
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24935
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63bd646fe0
+    fs.base:   0x00007f63bd648700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24939, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065945882560  r14:                 1048576
+    r13:             -4294967297  r12:                      10
+    rbp:      0x000000000000616b  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065945879552  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24939
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a4f30560
+    fs.base:   0x00007f63a4f31700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24942, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265634108  r14:         140065932232624
+    r13:         140066265634024  r12:                      10
+    rbp:      0x000000000000616e  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065932230336  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24942
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a422c020
+    fs.base:   0x00007f63a422d700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24937, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265624728  r14:         140065956416544
+    r13:         140066265624648  r12:                      10
+    rbp:      0x0000000000006169  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065956414272  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24937
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a593c4a0
+    fs.base:   0x00007f63a593d700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24945, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265628936  r14:         140065688308720
+    r13:         140066265628856  r12:                      10
+    rbp:      0x0000000000006171  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065688306432  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24945
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f639598c460
+    fs.base:   0x00007f639598d700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24940, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265624908  r14:         140065944824928
+    r13:         140066265624824  r12:                      10
+    rbp:      0x000000000000616c  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065944822656  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24940
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a4e2e4e0
+    fs.base:   0x00007f63a4e2f700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24947, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065686203168  r14:         140066265636584
+    r13:         140066265636504  r12:                      10
+    rbp:      0x0000000000006173  rbx:         140066265636560
+    r11:                     642  r10:         140066374979496
+    r9:          140065686200896  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24947
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f639578a3a0
+    fs.base:   0x00007f639578b700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24948, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065685150496  r14:         140066265636584
+    r13:         140066265636504  r12:                      10
+    rbp:      0x0000000000006174  rbx:         140066265636560
+    r11:                     642  r10:         140066374979496
+    r9:          140065685148224  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24948
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63956893a0
+    fs.base:   0x00007f639568a700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24950, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065683043712  r14:         140066267667580
+    r13:         140066267667496  r12:                      10
+    rbp:      0x0000000000006176  rbx:         140066267667556
+    r11:                     642  r10:         140066374979496
+    r9:          140065683041408  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24950
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f6395486de0
+    fs.base:   0x00007f6395488700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24951, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265629112  r14:         140065681992784
+    r13:         140066265629032  r12:                      10
+    rbp:      0x0000000000006177  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065681990528  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24951
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63953864e0
+    fs.base:   0x00007f6395387700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24952, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065680940176  r14:         140066265637288
+    r13:         140066265637208  r12:                      10
+    rbp:      0x0000000000006178  rbx:         140066265637264
+    r11:                     642  r10:         140066374979496
+    r9:          140065680937856  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24952
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63952854e0
+    fs.base:   0x00007f6395286700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24946, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065687256160  r14:         140066265628760
+    r13:         140066265628680  r12:                      10
+    rbp:      0x0000000000006172  rbx:         140066265628736
+    r11:                     642  r10:         140066374979496
+    r9:          140065687253888  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24946
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f639588b4e0
+    fs.base:   0x00007f639588c700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24949, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065684098160  r14:         140066265627512
+    r13:         140066265627432  r12:                      10
+    rbp:      0x0000000000006175  rbx:         140066265627488
+    r11:                     642  r10:         140066374979496
+    r9:          140065684095872  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24949
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63955884e0
+    fs.base:   0x00007f6395589700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24994, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065527304880  r14:                       1
+    r13:             -4294967297  r12:                      10
+    rbp:      0x00000000000061a2  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065677776064  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24994
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f6394f81620
+    fs.base:   0x00007f6394f82700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24982, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066265632684  r14:         140065678828752
+    r13:         140066265632600  r12:                      10
+    rbp:      0x0000000000006196  rbx:                       0
+    r11:                     642  r10:         140066374979496
+    r9:          140065678826496  r8:                        2
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24982
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f6395081d60
+    fs.base:   0x00007f6395083700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24981, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140066377605120  r14:         140065527303476
+    r13:         140066374954881  r12:                      10
+    rbp:      0x0000000000006195  rbx:                       7
+    r11:                     642  r10:         140066374979496
+    r9:          140065679881088  r8:                        0
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24981
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63951834e0
+    fs.base:   0x00007f6395184700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 336  PRSTATUS
+    info.si_signo: 0, info.si_code: 0, info.si_errno: 0, cursig: 0
+    sigpend: <>
+    sighold: <>
+    pid: 24941, ppid: 0, pgrp: 0, sid: 0
+    utime: 0.000000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 0, fpvalid: 0
+    r15:         140065933289632  r14:                       4
+    r13:                       3  r12:                      10
+    rbp:      0x000000000000616d  rbx:                    9880
+    r11:                     642  r10:         140065527302352
+    r9:          140065527301888  r8:                    12880
+    rax:                       0  rcx:         140066378575720
+    rdx:                      10  rsi:                   24941
+    rdi:                   24934  rip:      0x00007f63bebd6f68
+    rflags:   0x0000000000000282  rsp:      0x00007f63a432d8d0
+    fs.base:   0x00007f63a432f700  gs.base:   0x0000000000000000
+    cs: 0x0000  ss: 0x0000  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                9872  FILE
+    91 files:
+      558d70124000-558d70125000 00000000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70125000-558d70126000 00001000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70126000-558d70127000 00002000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70127000-558d70128000 00002000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70128000-558d70129000 00003000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      7f6395a8f000-7f6396000000 00000000 5705728     /usr/lib/locale/locale-archive
+      7f63a4330000-7f63a4334000 00000000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a4334000-7f63a4375000 00004000 266240      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a4375000-7f63a43fe000 00045000 561152      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a43fe000-7f63a43ff000 000cd000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a43ff000-7f63a4400000 000ce000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63bc00f000-7f63bc011000 00000000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc011000-7f63bc016000 00002000 20480       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc016000-7f63bc018000 00007000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc018000-7f63bc019000 00008000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc019000-7f63bc01a000 00009000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc01a000-7f63bc01e000 00000000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc01e000-7f63bc02d000 00004000 61440       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc02d000-7f63bc031000 00013000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc031000-7f63bc032000 00016000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc032000-7f63bc033000 00017000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc033000-7f63bc039000 00000000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc039000-7f63bc042000 00006000 36864       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc042000-7f63bc046000 0000f000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc046000-7f63bc047000 00013000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc047000-7f63bc048000 00013000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc048000-7f63bc049000 00014000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bd4f7000-7f63bd503000 00000000 49152       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd503000-7f63bd516000 0000c000 77824       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd516000-7f63bd51c000 0001f000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51c000-7f63bd51d000 00025000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51d000-7f63bd51e000 00025000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51e000-7f63bd51f000 00026000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd520000-7f63bd528000 00000000 32768       /home/ilya/spbu-works/minicriu-dev/examples/simple-test/cr/perfdata
+      7f63bd528000-7f63bd52b000 00000000 12288       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd52b000-7f63bd53f000 00003000 81920       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd53f000-7f63bd545000 00017000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd545000-7f63bd547000 0001c000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd547000-7f63bd548000 0001e000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd649000-7f63bd656000 00000000 53248       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd656000-7f63bd6fd000 0000d000 684032      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd6fd000-7f63bd796000 000b4000 626688      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd796000-7f63bd797000 0014c000 4096        /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd797000-7f63bd798000 0014d000 4096        /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd798000-7f63bd79a000 00000000 8192        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd79a000-7f63bd79e000 00002000 16384       /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd79e000-7f63bd7a0000 00006000 8192        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a0000-7f63bd7a1000 00007000 4096        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a1000-7f63bd7a2000 00008000 4096        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a2000-7f63bd9f4000 00000000 2433024     /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bd9f4000-7f63be7a3000 00252000 14348288    /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63be7a3000-7f63bea2d000 01001000 2662400     /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bea2d000-7f63beae6000 0128a000 757760      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63beae6000-7f63beb1b000 01343000 217088      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bebc6000-7f63bebcc000 00000000 24576       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebcc000-7f63bebdd000 00006000 69632       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebdd000-7f63bebe3000 00017000 24576       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe3000-7f63bebe4000 0001c000 4096        /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe4000-7f63bebe5000 0001d000 4096        /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe9000-7f63bebea000 00000000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebea000-7f63bebec000 00001000 8192        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebec000-7f63bebed000 00003000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebed000-7f63bebee000 00003000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebee000-7f63bebef000 00004000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebef000-7f63bebf1000 00000000 8192        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bebf1000-7f63bec02000 00002000 69632       /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec02000-7f63bec08000 00013000 24576       /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec08000-7f63bec09000 00019000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec09000-7f63bec0a000 00019000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec0a000-7f63bec0b000 0001a000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec0b000-7f63bec2d000 00000000 139264      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bec2d000-7f63beda5000 00022000 1540096     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63beda5000-7f63bedf3000 0019a000 319488      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedf3000-7f63bedf7000 001e7000 16384       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedf7000-7f63bedf9000 001eb000 8192        /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedfe000-7f63bee01000 00000000 12288       /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee01000-7f63bee08000 00003000 28672       /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee08000-7f63bee0a000 0000a000 8192        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee0a000-7f63bee0b000 0000b000 4096        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee0b000-7f63bee0c000 0000c000 4096        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee14000-7f63bee16000 00000000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee16000-7f63bee20000 00002000 40960       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee20000-7f63bee23000 0000c000 12288       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee23000-7f63bee24000 0000f000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee24000-7f63bee25000 0000f000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee25000-7f63bee26000 00010000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee28000-7f63bee29000 00000000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee29000-7f63bee4c000 00001000 143360      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee4c000-7f63bee54000 00024000 32768       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee55000-7f63bee56000 0002c000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee56000-7f63bee57000 0002d000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so

@@ -1,0 +1,1050 @@
+
+Note segment of 48832 bytes at offset 0x32c8:
+  Owner          Data size  Type
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <36>
+    pid: 24941, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.048000, stime: 0.260000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 62, fpvalid: 1
+    r15:                       0  r14:                      64
+    r13:                       0  r12:                      64
+    rbp:      0x00007f63a432e670  rbx:         140063178489856
+    r11:                     582  r10:                   24941
+    r9:                        0  r8:                        0
+    rax:                       0  rcx:         140066379937597
+    rdx:                    1313  rsi:                       6
+    rdi:                   24941  rip:      0x00007f63bed2373d
+    rflags:   0x0000000000000246  rsp:      0x00007f63a432b2e8
+    fs.base:   0x00007f63a432f700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 136  PRPSINFO
+    state: 2, sname: D, zomb: 0, nice: 0, flag: 0x0000000040400404
+    uid: 1000, gid: 1000, pid: 24934, ppid: 24929, pgrp: 24929, sid: 3787
+    fname: java
+    psargs: /home/ilya/spbu-works/minicriu-dev/jdks/jdk-17-with-minicriu/bin/java -XX:CRaCC
+  CORE                 128  SIGINFO
+    si_signo: 6, si_errno: 0, si_code: 0
+    sender PID: 24934, sender UID: 1000
+  CORE                 336  AUXV
+    SYSINFO_EHDR: 0x7fffd9fee000
+    51: 0x6f0
+    HWCAP: 0x178bfbff  <fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht>
+    PAGESZ: 4096
+    CLKTCK: 100
+    PHDR: 0x558d70124040
+    PHENT: 56
+    PHNUM: 13
+    BASE: 0x7f63bee28000
+    FLAGS: 0
+    ENTRY: 0x558d70125330
+    UID: 1000
+    EUID: 1000
+    GID: 1000
+    EGID: 1000
+    SECURE: 0
+    RANDOM: 0x7fffd9fe7b29
+    26: 0x2
+    EXECFN: 0x7fffd9fe9fb2
+    PLATFORM: 0x7fffd9fe7b39
+    NULL
+  CORE                9872  FILE
+    91 files:
+      558d70124000-558d70125000 00000000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70125000-558d70126000 00001000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70126000-558d70127000 00002000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70127000-558d70128000 00002000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      558d70128000-558d70129000 00003000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/bin/java
+      7f6395a8f000-7f6396000000 00000000 5705728     /usr/lib/locale/locale-archive
+      7f63a4330000-7f63a4334000 00000000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a4334000-7f63a4375000 00004000 266240      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a4375000-7f63a43fe000 00045000 561152      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a43fe000-7f63a43ff000 000cd000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63a43ff000-7f63a4400000 000ce000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libsvml.so
+      7f63bc00f000-7f63bc011000 00000000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc011000-7f63bc016000 00002000 20480       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc016000-7f63bc018000 00007000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc018000-7f63bc019000 00008000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc019000-7f63bc01a000 00009000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libzip.so
+      7f63bc01a000-7f63bc01e000 00000000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc01e000-7f63bc02d000 00004000 61440       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc02d000-7f63bc031000 00013000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc031000-7f63bc032000 00016000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc032000-7f63bc033000 00017000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnet.so
+      7f63bc033000-7f63bc039000 00000000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc039000-7f63bc042000 00006000 36864       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc042000-7f63bc046000 0000f000 16384       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc046000-7f63bc047000 00013000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc047000-7f63bc048000 00013000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bc048000-7f63bc049000 00014000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libnio.so
+      7f63bd4f7000-7f63bd503000 00000000 49152       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd503000-7f63bd516000 0000c000 77824       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd516000-7f63bd51c000 0001f000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51c000-7f63bd51d000 00025000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51d000-7f63bd51e000 00025000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd51e000-7f63bd51f000 00026000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjava.so
+      7f63bd520000-7f63bd528000 00000000 32768       /home/ilya/spbu-works/minicriu-dev/examples/simple-test/cr/perfdata
+      7f63bd528000-7f63bd52b000 00000000 12288       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd52b000-7f63bd53f000 00003000 81920       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd53f000-7f63bd545000 00017000 24576       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd545000-7f63bd547000 0001c000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd547000-7f63bd548000 0001e000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjimage.so
+      7f63bd649000-7f63bd656000 00000000 53248       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd656000-7f63bd6fd000 0000d000 684032      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd6fd000-7f63bd796000 000b4000 626688      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd796000-7f63bd797000 0014c000 4096        /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd797000-7f63bd798000 0014d000 4096        /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      7f63bd798000-7f63bd79a000 00000000 8192        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd79a000-7f63bd79e000 00002000 16384       /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd79e000-7f63bd7a0000 00006000 8192        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a0000-7f63bd7a1000 00007000 4096        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a1000-7f63bd7a2000 00008000 4096        /usr/lib/x86_64-linux-gnu/librt-2.31.so
+      7f63bd7a2000-7f63bd9f4000 00000000 2433024     /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bd9f4000-7f63be7a3000 00252000 14348288    /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63be7a3000-7f63bea2d000 01001000 2662400     /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bea2d000-7f63beae6000 0128a000 757760      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63beae6000-7f63beb1b000 01343000 217088      /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/server/libjvm.so
+      7f63bebc6000-7f63bebcc000 00000000 24576       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebcc000-7f63bebdd000 00006000 69632       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebdd000-7f63bebe3000 00017000 24576       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe3000-7f63bebe4000 0001c000 4096        /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe4000-7f63bebe5000 0001d000 4096        /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+      7f63bebe9000-7f63bebea000 00000000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebea000-7f63bebec000 00001000 8192        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebec000-7f63bebed000 00003000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebed000-7f63bebee000 00003000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebee000-7f63bebef000 00004000 4096        /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+      7f63bebef000-7f63bebf1000 00000000 8192        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bebf1000-7f63bec02000 00002000 69632       /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec02000-7f63bec08000 00013000 24576       /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec08000-7f63bec09000 00019000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec09000-7f63bec0a000 00019000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec0a000-7f63bec0b000 0001a000 4096        /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+      7f63bec0b000-7f63bec2d000 00000000 139264      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bec2d000-7f63beda5000 00022000 1540096     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63beda5000-7f63bedf3000 0019a000 319488      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedf3000-7f63bedf7000 001e7000 16384       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedf7000-7f63bedf9000 001eb000 8192        /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      7f63bedfe000-7f63bee01000 00000000 12288       /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee01000-7f63bee08000 00003000 28672       /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee08000-7f63bee0a000 0000a000 8192        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee0a000-7f63bee0b000 0000b000 4096        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee0b000-7f63bee0c000 0000c000 4096        /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+      7f63bee14000-7f63bee16000 00000000 8192        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee16000-7f63bee20000 00002000 40960       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee20000-7f63bee23000 0000c000 12288       /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee23000-7f63bee24000 0000f000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee24000-7f63bee25000 0000f000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee25000-7f63bee26000 00010000 4096        /home/ilya/spbu-works/minicriu-dev/source-jdks/jdk-with-minicriu/crac/build/linux-x86_64-server-release/jdk/lib/libjli.so
+      7f63bee28000-7f63bee29000 00000000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee29000-7f63bee4c000 00001000 143360      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee4c000-7f63bee54000 00024000 32768       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee55000-7f63bee56000 0002c000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      7f63bee56000-7f63bee57000 0002d000 4096        /usr/lib/x86_64-linux-gnu/ld-2.31.so
+  CORE                 512  FPREGSET
+    xmm0:  0x00000000000000000000000000000000
+    xmm1:  0x000000000000000000ff000000000000
+    xmm2:  0x00000000000000000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x203a642520746e696f706b6365686320
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x20002020000000000000000000000000
+    xmm11: 0x240ca1cc0fc19dc6efbe4786e49b69c1
+    xmm12: 0xc19bf1749bdc06a780deb1fe72be5d74
+    xmm13: 0x550c7dc3243185be12835b01d807aa98
+    xmm14: 0xab1c5ed5923f82a459f111f13956c25b
+    xmm15: 0xe9b5dba5b5c0fbcf71374491428a2f98
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001fa0
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24981, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.000000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066377605120  r14:         140065527303476
+    r13:         140066374954881  r12:         140065191759472
+    rbp:      0x00007f6395183670  rbx:                   24981
+    r11:                     582  r10:                       0
+    r9:                        0  r8:          140065679881088
+    rax:                    -512  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395183500
+    fs.base:   0x00007f6395184700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <36>
+    pid: 24934, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.548000, stime: 3.100000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066355971840  r14:         140736850703152
+    r13:         140066355972560  r12:                   24935
+    rbp:      0x00007fffd9fe3330  rbx:                     202
+    r11:                     582  r10:                       0
+    r9:          140066355971840  r8:                        0
+    rax:                    -512  rcx:         140066378546391
+    rdx:                   24935  rsi:                       0
+    rdi:         140066355972560  rip:      0x00007f63bebcfcd7
+    rflags:   0x0000000000000246  rsp:      0x00007fffd9fe3280
+    fs.base:   0x00007f63bebc5440  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x00007f63bd6489e000007f63bd6489e0
+    xmm1:  0x00000000000000000000000000000000
+    xmm2:  0x65742d656c706d69732f746567726174
+    xmm3:  0x312d747365742d656c706d69732f7465
+    xmm4:  0x6574616572437465475f494e4a007367
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x000000000000000000007f63be75fb90
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x00000000000073253d73250073253d68
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x20002020200000000000200000000020
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24935, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.184000, stime: 0.056000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:                       7  r14:         140065527303476
+    r13:         140066374954881  r12:         140066265645408
+    rbp:      0x00007f63bd647170  rbx:                   24935
+    r11:                     582  r10:                       0
+    r9:               2603631256  r8:          140066355965568
+    rax:                    -512  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63bd647000
+    fs.base:   0x00007f63bd648700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24994, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.000000, stime: 0.124000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065527304880  r14:                       1
+    r13:             -4294967297  r12:                       0
+    rbp:      0x00007f6394f817b0  rbx:                   24994
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065677776064
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6394f81640
+    fs.base:   0x00007f6394f82700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24943, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.168000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066266985084  r14:         140065931179536
+    r13:         140066266985000  r12:         140066266985076
+    rbp:      0x00007f63a412b030  rbx:                   24943
+    r11:                     582  r10:                       2
+    r9:          140065943425784  r8:          140065931177280
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a412aec0
+    fs.base:   0x00007f63a412c700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24947, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.096000, stime: 0.148000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065686203168  r14:         140066265636584
+    r13:         140066265636504  r12:         140066265636580
+    rbp:      0x00007f639578a530  rbx:                   24947
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065686200896
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f639578a3c0
+    fs.base:   0x00007f639578b700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24951, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.008000, stime: 0.112000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265629112  r14:         140065681992784
+    r13:         140066265629032  r12:         140066265629108
+    rbp:      0x00007f6395386670  rbx:                   24951
+    r11:                     582  r10:                       2
+    r9:          140065681992720  r8:          140065681990528
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395386500
+    fs.base:   0x00007f6395387700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24942, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.268000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265634108  r14:         140065932232624
+    r13:         140066265634024  r12:         140066265634100
+    rbp:      0x00007f63a422c1b0  rbx:                   24942
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065932230336
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a422c040
+    fs.base:   0x00007f63a422d700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24950, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.156000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065683043712  r14:         140066267667580
+    r13:         140066267667496  r12:         140066267667572
+    rbp:      0x00007f6395486f70  rbx:                   24950
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065683041408
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395486e00
+    fs.base:   0x00007f6395488700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24939, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.000000, stime: 0.144000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065945882560  r14:                 1048576
+    r13:             -4294967297  r12:                       0
+    rbp:      0x00007f63a4f306f0  rbx:                   24939
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065945879552
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a4f30580
+    fs.base:   0x00007f63a4f31700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24936, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.140000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265887168  r14:                       1
+    r13:             -4294967297  r12:                       0
+    rbp:      0x00007f63a5a3e7b0  rbx:                   24936
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065957471424
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a5a3e640
+    fs.base:   0x00007f63a5a3f700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24938, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.008000, stime: 0.184000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265951776  r14:                       1
+    r13:             -4294967297  r12:                       0
+    rbp:      0x00007f63a583a7b0  rbx:                   24938
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065955357888
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a583a640
+    fs.base:   0x00007f63a583b700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24982, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.008000, stime: 0.164000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265632684  r14:         140065678828752
+    r13:         140066265632600  r12:         140066265632676
+    rbp:      0x00007f6395081ef0  rbx:                   24982
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065678826496
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395081d80
+    fs.base:   0x00007f6395083700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24940, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.000000, stime: 0.124000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265624908  r14:         140065944824928
+    r13:         140066265624824  r12:         140066265624900
+    rbp:      0x00007f63a4e2e670  rbx:                   24940
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065944822656
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a4e2e500
+    fs.base:   0x00007f63a4e2f700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24952, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.160000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065680940176  r14:         140066265637288
+    r13:         140066265637208  r12:         140066265637284
+    rbp:      0x00007f6395285670  rbx:                   24952
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065680937856
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395285500
+    fs.base:   0x00007f6395286700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24948, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.120000, stime: 0.132000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065685150496  r14:         140066265636584
+    r13:         140066265636504  r12:         140066265636580
+    rbp:      0x00007f6395689530  rbx:                   24948
+    r11:                     582  r10:                       2
+    r9:              12884901887  r8:          140065685148224
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63956893c0
+    fs.base:   0x00007f639568a700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24937, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.184000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: -1, fpvalid: 1
+    r15:         140066265624728  r14:         140065956416544
+    r13:         140066265624648  r12:         140066265624724
+    rbp:      0x00007f63a593c630  rbx:                   24937
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065956414272
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f63a593c4c0
+    fs.base:   0x00007f63a593d700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24946, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.004000, stime: 0.140000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065687256160  r14:         140066265628760
+    r13:         140066265628680  r12:         140066265628756
+    rbp:      0x00007f639588b670  rbx:                   24946
+    r11:                     582  r10:                       2
+    r9:          140065687256080  r8:          140065687253888
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f639588b500
+    fs.base:   0x00007f639588c700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24945, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.016000, stime: 0.176000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265628936  r14:         140065688308720
+    r13:         140066265628856  r12:         140066265628932
+    rbp:      0x00007f639598c5f0  rbx:                   24945
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065688306432
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f639598c480
+    fs.base:   0x00007f639598d700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24949, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.012000, stime: 0.140000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140065684098160  r14:         140066265627512
+    r13:         140066265627432  r12:         140066265627508
+    rbp:      0x00007f6395588670  rbx:                   24949
+    r11:                     582  r10:                       2
+    r9:          140066380792224  r8:          140065684095872
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395588500
+    fs.base:   0x00007f6395589700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
+  CORE                 336  PRSTATUS
+    info.si_signo: 6, info.si_code: 0, info.si_errno: 0, cursig: 6
+    sigpend: <>
+    sighold: <3,31,36>
+    pid: 24944, ppid: 24929, pgrp: 24929, sid: 3787
+    utime: 0.012000, stime: 0.112000, cutime: 0.000000, cstime: 0.000000
+    orig_rax: 202, fpvalid: 1
+    r15:         140066265581792  r14:                       2
+    r13:             -4294967297  r12:                       0
+    rbp:      0x00007f6395a8d4f0  rbx:                   24944
+    r11:                     582  r10:                       2
+    r9:                        0  r8:          140065689358848
+    rax:                     -14  rcx:         140066374096347
+    rdx:                       0  rsi:                       0
+    rdi:         140066378170004  rip:      0x00007f63be7915db
+    rflags:   0x0000000000000246  rsp:      0x00007f6395a8d380
+    fs.base:   0x00007f6395a8e700  gs.base:   0x0000000000000000
+    cs: 0x0033  ss: 0x002b  ds: 0x0000  es: 0x0000  fs: 0x0000  gs: 0x0000
+  CORE                 512  FPREGSET
+    xmm0:  0x25252525252525252525252525252525
+    xmm1:  0x000000000000ff0000ff000000000000
+    xmm2:  0x000000000000ff000000000000000000
+    xmm3:  0x00000000000000000000000000000000
+    xmm4:  0x00000000000000000000000000000000
+    xmm5:  0x00000000000000000000000000000000
+    xmm6:  0x00000000000000000000000000000000
+    xmm7:  0x00000000000000000000000000000000
+    xmm8:  0x7263696e696d000a6425207274706469
+    xmm9:  0x00000000000000000000000000000000
+    xmm10: 0x00000000000000000000000000000000
+    xmm11: 0x00000000000000000000000000000000
+    xmm12: 0x00000000000000000000000000000000
+    xmm13: 0x00000000000000000000000000000000
+    xmm14: 0x00000000000000000000000000000000
+    xmm15: 0x00000000000000000000000000000000
+    st0: 0x00000000000000000000  st1: 0x00000000000000000000
+    st2: 0x00000000000000000000  st3: 0x00000000000000000000
+    st4: 0x00000000000000000000  st5: 0x00000000000000000000
+    st6: 0x00000000000000000000  st7: 0x00000000000000000000
+    mxcsr:   0x0002ffff00001f80
+    fcw: 0x037f  fsw: 0x0000
+  LINUX                832  X86_XSTATE
